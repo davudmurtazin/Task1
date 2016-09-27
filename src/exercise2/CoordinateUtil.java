@@ -25,7 +25,7 @@ public class CoordinateUtil {
         if(coordinate.getCoordX() > 4 && coordinate.getCoordY() > 5 ||
                 coordinate.getCoordX() < -4 && coordinate.getCoordY() > 5 ||
                 coordinate.getCoordX() > 6 && coordinate.getCoordY() < -3.3 ||
-                coordinate.getCoordX() > -6 && coordinate.getCoordY() < -3.3){
+                coordinate.getCoordX() < -6 && coordinate.getCoordY() < -3.3){
             return false;
         }
         else {

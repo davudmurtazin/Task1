@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Created by Davud_Murtazin on 9/26/2016.
  */
 public class LineUtil {
-    private static LinkedHashMap<Double, Double> hashMap;
+    private static LinkedHashMap<Double, Double> hashMap = new LinkedHashMap<>();
 
     public static Line initLine(Line line){
         Scanner sc = new Scanner(System.in);
@@ -28,7 +28,6 @@ public class LineUtil {
     }
 
     public static LinkedHashMap<Double, Double> addToTable(Line line){
-        hashMap = new LinkedHashMap<>();
         if(line.getH() <= 0 && line.getA() <= 0 && line.getB() <= 0){
             System.out.println("Values have to be positive!");
         }
