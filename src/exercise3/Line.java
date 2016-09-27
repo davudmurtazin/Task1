@@ -11,6 +11,7 @@ public class Line {
     private double h;
 
     public Line(){
+
     }
 
     public Line(double a, double b, double h) {

@@ -35,6 +35,7 @@ public class PositiveTest {
                 { -5, -3.1 }
         });
     }
+    
 
     @Test
     public void checkCoordinates() throws Exception {
