@@ -6,7 +6,7 @@ package exercise6;
 public class MatrixUtil {
 
     //функция смещение на 1 влево
-    public int[] leftDisplace(int array[], int arrayLenght) {
+    public static int[] leftDisplace(int array[], int arrayLenght) {
         int temp = array[0];
         for (int i = 0; i < arrayLenght - 1; i++) {
             array[i] = array[i + 1];
@@ -15,7 +15,7 @@ public class MatrixUtil {
         return array;
     }
 
-    public void createMatrix(){
+    public static void createMatrix(){
         int[] array = new int[]{6,7,8,9,3};
         int[][] matrix = new int[array.length][array.length];
         for (int i = 0; i < array.length; i++) {

@@ -1,37 +1,39 @@
 package exercise3;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import exercise2.CoordinateUtil;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.LinkedHashMap;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Davud_Murtazin on 9/27/2016.
  */
-@RunWith(Parameterized.class)
 public class PositiveTest {
-    private LinkedHashMap<Double, Double> hashMap = new LinkedHashMap<>();
-    private Line line;
+    private LinkedHashMap<Double, Double> hashMap;
 
-
-    @Before
+    @BeforeTest
     public void setUp() throws Exception {
-        hashMap.put(5.0, -3.380515006246586);
+        hashMap = new LinkedHashMap<>();
+        hashMap.put(1.0, 1.5574077246549023);
+        hashMap.put(2.5, -0.7470222972386603);
+        hashMap.put(4.0, 1.1578212823495777);
+        hashMap.put(5.5, -0.995584052213885);
+        hashMap.put(7.0, 0.8714479827243187);
         hashMap.put(8.5, -1.326364327785607);
-        hashMap.put(8.8, -0.7211468755756028);
-        hashMap.put(1.4, 5.797883715482887);
+        hashMap.put(10.0, 0.6483608274590866);
     }
 
     @Test
-    public void addToTable11() throws Exception {
-        line = new Line(1,10,0.2);
-        Assert.assertEquals(hashMap, LineUtil.addToTable(line));
+    public void checkInitLine() throws Exception {
+        Assert.assertEquals(hashMap, LineUtil.addToTable(1.0,10.0,1.5));
+    }
+
+    @AfterTest
+    public void cleahHashMap(){
+        hashMap.clear();
     }
 }

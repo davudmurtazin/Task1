@@ -7,6 +7,6 @@ public class Controller {
     public static void main(String[] args) {
         Line line = new Line();
         LineUtil.initLine(line);
-        LineUtil.printHashMapValue(LineUtil.addToTable(line));
+        LineUtil.printHashMapValue(LineUtil.addToTable(line.getA(),line.getB(),line.getH()));
     }
 }

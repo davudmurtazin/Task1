@@ -1,28 +1,32 @@
 package exercise1;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 /**
  * Created by Davud_Murtazin on 9/24/2016.
  */
 public class ParameterUtil {
-    private double XX = 6.1;
-    private double YY = 7.2;
 
-    public Parameter setParameters(Parameter parametr){
-        parametr.setX(XX);
-        parametr.setY(YY);
-        return parametr;
+    public static Parameter setParameters(Parameter parameter){
+        System.out.println("Enter x: ");
+        Scanner scX = new Scanner(System.in);
+        double XX = scX.nextDouble();
+        System.out.println("Enter y: ");
+        Scanner scY = new Scanner(System.in);
+        double YY = scY.nextDouble();
+        parameter.setX(XX);
+        parameter.setY(YY);
+        return parameter;
     }
 
-    public double solveTheEquation(Parameter parameter){
-        double equation = (1 + Math.sqrt(Math.sin(parameter.getX() + parameter.getY()))) /
-                (2 + Math.abs(parameter.getX() - ((2 * parameter.getX()) /
-                (1 + (Math.sqrt(parameter.getX() * Math.sqrt(parameter.getY()))))))) + parameter.getX();
+    public static double solveTheEquation(double x, double y){
+        double equation =((1 + (Math.sin(x + y)) * (Math.sin(x + y))) / (2 + Math.abs(x - (2 * x /
+                          (1 + Math.pow(x, 2) * Math.pow(y, 2))))) + x);
         return equation;
     }
 
-    public void printSolution(Parameter parameter, double result){
-        System.out.printf("X = %.2f Y = %.2f \nResult: %.3f", parameter.getX(), parameter.getY(), result);
+    public static void printSolution(double result){
+        System.out.println("Result: " + result);
     }
 }

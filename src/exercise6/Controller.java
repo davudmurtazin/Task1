@@ -5,7 +5,6 @@ package exercise6;
  */
 public class Controller {
     public static void main(String[] args) {
-        MatrixUtil matrix = new MatrixUtil();
-        matrix.createMatrix();
+        MatrixUtil.createMatrix();
     }
 }

@@ -21,11 +21,11 @@ public class CoordinateUtil {
         return coordinate;
     }
 
-    public static boolean checkCoordinates(Coordinate coordinate){
-        if(coordinate.getCoordX() > 4 && coordinate.getCoordY() > 5 ||
-                coordinate.getCoordX() < -4 && coordinate.getCoordY() > 5 ||
-                coordinate.getCoordX() > 6 && coordinate.getCoordY() < -3.3 ||
-                coordinate.getCoordX() < -6 && coordinate.getCoordY() < -3.3){
+    public static boolean checkCoordinates(double x, double y){
+        if(x >= 4 && y >= 5 ||
+                x <= -4 && y >= 5 ||
+                x >=  6 && y <= -3.3 ||
+                x <= -6 && y <= -3.3){
             return false;
         }
         else {

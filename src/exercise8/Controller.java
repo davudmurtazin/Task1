@@ -9,7 +9,6 @@ public class Controller {
         double[] arrayLocal2 = new double[]{2.4, 3.7, 9.7, 4.3, 5.1, 18.2, 6.3, 1.2, 8.1};
         Array array1 = new Array(arrayLocal1);
         Array array2 = new Array(arrayLocal2);
-        ArrayUtil.beforeArray(array1,array2);
-        ArrayUtil.insideArray(array1,array2);
+        ArrayUtil.checkArray(array1,array2);
     }
 }

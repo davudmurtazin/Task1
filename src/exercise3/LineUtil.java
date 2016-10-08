@@ -27,12 +27,12 @@ public class LineUtil {
         return line;
     }
 
-    public static LinkedHashMap<Double, Double> addToTable(Line line){
-        if(line.getH() <= 0 && line.getA() <= 0 && line.getB() <= 0){
+    public static LinkedHashMap<Double, Double> addToTable(double a, double b, double h){
+        if(h <= 0 && a <= 0 && b <= 0){
             System.out.println("Values have to be positive!");
         }
         else{
-            for(double requiredValue = line.getA(); requiredValue <= line.getB(); requiredValue += line.getH()){
+            for(double requiredValue = a; requiredValue <= b; requiredValue += h){
                 double equation = Math.tan(requiredValue);
                 hashMap.put(requiredValue,equation);
             }

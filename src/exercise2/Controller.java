@@ -9,7 +9,7 @@ public class Controller {
     public static void main(String[] args) {
         Coordinate coordinate = new Coordinate();
         CoordinateUtil.initCoordinates(coordinate);
-        CoordinateUtil.printResult(CoordinateUtil.checkCoordinates(coordinate));
+        CoordinateUtil.printResult(CoordinateUtil.checkCoordinates(coordinate.getCoordX(), coordinate.getCoordY()));
     }
 
 }
